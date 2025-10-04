@@ -1,56 +1,78 @@
-# ATM Banking Simulator (C Language)
-**WK5_Assignment – Week 5 Project**
+# WK5_Assignment - ATM Simulator in C
 
-This project is a simple **ATM Banking System** written in C, designed as part of the **Week 5 Assignment**.
-It demonstrates the use of **variables, arrays, strings, functions, loops, and conditional logic**.
-The program allows a user to log in with a **4-digit PIN** and perform banking operations such as:
+## 📌 Problem Statement
+This project was developed as part of **Week 5 Assignment**.
+The task was to implement a simple **ATM banking system** in C using only:
+- Variables
+- Control flow (if, switch, loops)
+- Functions
+- Arrays (1D, 2D)
+- Strings
 
-- Withdraw money
-- Deposit money
-- Check balance
-- Exit the ATM
+The ATM system simulates login with a username and a 4-digit PIN, then allows users to:
+1. Check Balance
+2. Deposit Money
+3. Withdraw Money
+4. View Transaction History
+5. Logout
 
----
-
-## Features
-- Secure **4-digit PIN login** (max 3 attempts)
-- Balance checking
-- Deposit & withdrawal operations with input validation
-- Modular design with separate functions
-- Clear contributor division for group work
-
----
-
-## Contributors & Work Division
-- **Maxwel Okoth** → Implemented **PIN login system** and **withdrawal function**.
-- **Michael Obiku** → Implemented **deposit function** and **balance check function**.
-- **Both** → Designed **menu system**, testing, and documentation.
+The goal was to apply **modular design** and practice input/output operations, loops, and string/array management.
 
 ---
 
-## Repository Link
-[WK5_Assignment on GitHub](https://github.com/Fejiroobiku/WK5_Assignment)
+## ⚙️ Assumptions
+- There are **3 predefined users** in the system.
+- Each user has:
+  - A unique username (string)
+  - A 4-digit PIN (integer)
+  - A starting balance (float)
+- Transaction history stores the **last 10 actions**.
+- No external libraries or structs were used (only arrays & strings, as required).
 
 ---
 
-## How to Compile & Run
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Fejiroobiku/WK5_Assignment.git
-   cd WK5_Assignment
+## 🖥️ Compilation & Execution
+To compile and run the program:
 
-    Compile the program:
+```bash
+gcc -Wall -Werror -pedantic -std=ansi atm.c -o atm
+./atm
 
-gcc atm.c -o atm
+🔑 Sample Run
 
-Run the program:
+=== Welcome to the ATM Simulator ===
 
-    ./atm
+Enter username: maxwel
+Enter 4-digit PIN: 1234
 
-Notes
+Login successful! Welcome, maxwel.
 
-    This project was developed as part of Week 5 Assignment (6% of course grade).
+--- ATM Menu ---
+1. Check Balance
+2. Deposit
+3. Withdraw
+4. View Transactions
+5. Logout
+Choose option: 1
 
-    Group size: 2 contributors (out of maximum 3 allowed).
+Your balance: 1000.00
 
-    The work was divided fairly as documented above.
+📂 Key Functions
+
+    login() → Handles username and PIN authentication
+
+    menu() → Displays the ATM menu and routes choices
+
+    check_balance() → Prints user balance
+
+    deposit() → Adds money and logs the transaction
+
+    withdraw() → Deducts money (if sufficient) and logs
+
+    view_transactions() → Shows up to 10 recent operations
+
+👥 Contributors
+
+    Maxwel Okoth – Implemented login system, menu flow, and deposits
+
+    Michael Obiku – Implemented withdrawals, transaction history, and code cleanup
