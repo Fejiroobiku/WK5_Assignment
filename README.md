@@ -1,6 +1,6 @@
 # WK5_Assignment - ATM Simulator in C
 
-## 📌 Problem Statement
+## Problem Statement
 This project was developed as part of **Week 5 Assignment**.
 The task was to implement a simple **ATM banking system** in C using only:
 - Variables
@@ -20,7 +20,7 @@ The goal was to apply **modular design** and practice input/output operations, l
 
 ---
 
-## ⚙️ Assumptions
+##  Assumptions
 - There are **3 predefined users** in the system.
 - Each user has:
   - A unique username (string)
@@ -31,14 +31,14 @@ The goal was to apply **modular design** and practice input/output operations, l
 
 ---
 
-## 🖥️ Compilation & Execution
+##  Compilation & Execution
 To compile and run the program:
 
 ```bash
 gcc -Wall -Werror -pedantic -std=ansi atm.c -o atm
 ./atm
 
-🔑 Sample Run
+Sample Run
 
 === Welcome to the ATM Simulator ===
 
@@ -57,7 +57,7 @@ Choose option: 1
 
 Your balance: 1000.00
 
-📂 Key Functions
+ Key Functions
 
     login() → Handles username and PIN authentication
 
@@ -71,7 +71,7 @@ Your balance: 1000.00
 
     view_transactions() → Shows up to 10 recent operations
 
-👥 Contributors
+Contributors
 
     Maxwel Okoth – Implemented login system, menu flow, and deposits
 
